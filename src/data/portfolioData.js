@@ -1,355 +1,246 @@
 // ============================================================
-// portfolioData.js — Centralized configuration for Md Yusuf's Portfolio
+// portfolioData.js — Centralized configuration for Zawar Zohaib's Portfolio
 // All external links, personal info, and content in one place.
 // Update this file to change any content across the entire site.
 // ============================================================
 
 export const personalInfo = {
-  name: "Md Yusuf",
-  firstName: "Md Yusuf",
-  brandName: "Md Yusuf",
-  title: "Full Stack & Java Developer",
-  location: "Bhopal, India",
-  phone: "+91 99396-08743",
+  name: "Zawar Zohaib",
+  firstName: "Zawar",
+  brandName: "Zawar Zohaib",
+  title: "Data Scientist in Training",
+  location: "Newport, Wales, UK",
+  phone: "+44 7405 376702",
   emails: {
-    primary: "mdyusufcse096@iesuniversity.ac.in",
-    secondary: "yusuf.rgpv@gmail.com",
+    primary: "zawarzohaib096@gmail.com",
   },
   summary:
-    "Aspiring software engineer and motivated B.Tech Computer Science student with solid skills in Java, Spring Boot, React, and Python. Passionate about building scalable full-stack applications with clean architecture and modern tech stacks.",
-  resumeUrl: "/Md_Yusuf_Resume_2026.pdf",
+    "MSc Data Science postgraduate at UWE Bristol with a BS in Statistics and 3+ years of professional experience in field research, survey operations, and data administration. Now adding machine learning, data engineering, and AI tooling to that foundation.",
+  resumeUrl: "/Zawar_Zohaib_Resume.pdf",
 };
 
 export const socialLinks = {
-  github: "https://github.com/mdyusuf0",
-  linkedin: "https://linkedin.com/in/mdyusuf0",
-  instagram: "https://instagram.com/heyyusuffff",
+  github: "https://github.com/zawarmalik",
+  linkedin: "https://www.linkedin.com/in/zawar-malik/",
 };
 
 export const heroContent = {
-  greeting: "Hi, I'm Md Yusuf",
-  titleHighlight: "Full Stack & Java Developer",
+  greeting: "Hi, I'm Zawar",
+  titleHighlight: "Data Scientist in Training",
   subtitle:
-    "I build fast, scalable applications using Java, Spring Boot, MERN Stack, and Python.",
+    "MSc Data Science @ UWE Bristol · 3+ years in field research, survey operations & data administration · Based in Newport, Wales",
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
-    href: "mailto:mdyusufcse096@iesuniversity.ac.in?subject=Hiring Inquiry – Portfolio&body=Hello Md Yusuf,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ALooking forward to hearing from you.%0D%0ABest Regards,",
+    href: "mailto:zawarzohaib096@gmail.com?subject=Hiring Inquiry – Portfolio&body=Hello Zawar,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ALooking forward to hearing from you.%0D%0ABest Regards,",
   },
-  ctaResume: { text: "Download Resume", href: "/Md_Yusuf_Resume_2026.pdf" },
+  ctaResume: { text: "Download Resume", href: "/Zawar_Zohaib_Resume.pdf" },
 };
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Md Yusuf</span>, an aspiring software engineer based in Bhopal, India, dedicated to crafting clean, functional, and highly scalable full-stack applications.`,
-  techStack: ["Java", "Spring Boot", "MERN Stack"],
+  bio: `I'm a <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Data Science</span> postgraduate at the University of the West of England, Bristol, with a BS in Statistics and over three years of professional experience where data meets the real world. My career started on the ground — literally. As a Field Compliance Officer for Pakistan's national Benazir Income Support Programme, I conducted structured interviews across 500+ households, audited beneficiary records to 100% accuracy standards, and trained junior field staff. Before that, I managed a 1,000+ record emergency blood-donor database, where a workflow redesign I led cut donor-to-patient matching time by 40%. These days I'm adding machine learning, data engineering and AI tooling to that foundation — including building my own AI-powered career platform with React and the Claude API.`,
+  techStack: ["Statistics", "Fieldwork", "AI Tooling"],
 };
 
 export const skillsContent = {
   badge: "My Process",
-  heading: "Here's how I turn ideas into real-world applications",
+  heading: "Here's how I turn field data into real-world decisions",
   description:
-    "I follow a structured, creative, and highly technical approach to turn ideas into robust full-stack applications.",
+    "I follow a structured, honest, and rigorous approach to turn raw data — surveys, interviews, datasets — into decisions people can act on.",
   cards: [
     {
       number: "01",
       title: "Research",
-      text: "I start by understanding goals, user requirements, and technical constraints to lay a rock-solid foundation for the project.",
+      text: "I start by understanding the question, the community, and the constraints — designing survey instruments and interview protocols before collecting a single data point.",
     },
     {
       number: "02",
-      title: "Design",
-      text: "Crafting clean architecture, intuitive interfaces, and pixel-perfect wireframes that guarantee an engaging and accessible user experience.",
+      title: "Collect",
+      text: "Structured door-to-door interviews, compliance audits, and primary data collection — done honestly, with the people behind the data always front of mind.",
     },
     {
       number: "03",
-      title: "Develop",
-      text: "Building scalable backends and responsive frontends using modern tech stacks and best practices.",
+      title: "Analyze",
+      text: "Cleaning, structuring, and modelling the data — from regression and hypothesis testing in R to AI-powered analytics tools I build myself.",
     },
     {
       number: "04",
-      title: "Deploy",
-      text: "Rigorous testing, performance optimization, and seamless deployment to cloud infrastructure, followed by ongoing support.",
+      title: "Report",
+      text: "Clear, honest reporting and policy recommendations that institutions and teams can actually act on — the outcome, not just the analysis.",
     },
   ],
-  endText: "Ready to ship!",
+  endText: "Data you can trust!",
 };
 
-// Brand New Technical Skills Data
+// Technical Skills — grouped by category, no invented proficiency numbers
 export const technicalSkills = {
   categories: [
     {
-      title: "Programming Languages",
-      skills: [
-        { name: "Java", level: 90 },
-        { name: "C++", level: 85 },
-        { name: "Python", level: 75 }
-      ]
+      title: "Statistics & Analysis",
+      skills: ["R", "SPSS", "Minitab", "Regression", "Hypothesis Testing", "Data Cleaning"],
     },
     {
-      title: "Full Stack",
-      skills: [
-        { name: "MERN Stack", level: 90 },
-        { name: "HTML", level: 95 },
-        { name: "CSS", level: 90 },
-        { name: "JavaScript", level: 92 }
-      ]
+      title: "Programming & Data",
+      skills: ["Python (Pandas)", "Excel (VLOOKUP, Pivot Tables)", "Google Sheets", "SQL (learning)"],
     },
     {
-      title: "Backend",
-      skills: [
-        { name: "Spring Boot", level: 88 },
-        { name: "FastAPI", level: 75 },
-        { name: "REST APIs", level: 90 }
-      ]
+      title: "Research & Fieldwork",
+      skills: ["Survey Design", "Structured Interviewing", "Qualitative Data Collection", "Compliance Auditing"],
     },
     {
-      title: "Databases",
-      skills: [
-        { name: "MongoDB", level: 88 },
-        { name: "MySQL", level: 85 },
-        { name: "Firebase", level: 80 }
-      ]
+      title: "AI & Tools",
+      skills: ["Claude/LLM APIs", "Prompt Engineering", "React (basic)", "MS Office"],
     },
     {
-      title: "Tools & Automation",
-      skills: [
-        { name: "Git & GitHub", level: 90 },
-        { name: "VS Code", level: 95 },
-        { name: "Postman", level: 88 },
-        { name: "n8n", level: 82 },
-        { name: "MongoDB Compass", level: 85 },
-        { name: "Antigravity", level: 80 },
-        { name: "Codex", level: 75 }
-      ]
+      title: "Professional",
+      skills: ["Report Writing", "Data Protection/GDPR", "Team Training", "Stakeholder Engagement"],
     },
-    {
-      title: "Computer Science Concepts",
-      skills: [
-        { name: "Data Structures", level: 88 },
-        { name: "Algorithms", level: 85 },
-        { name: "DBMS", level: 86 },
-        { name: "OOP", level: 90 },
-        { name: "Software Engineering", level: 84 }
-      ]
-    }
-  ]
+  ],
 };
 
-// Brand New Content Creation Data
-export const contentCreation = {
-  badge: "Cinematic Content",
-  heading: "Creative Direction & Cinematic Edits",
-  description: "Beyond coding, I craft visual stories with premium editing, color grading, and creative pacing.",
-  categories: [
-    {
-      title: "Cinematic Reels",
-      description: "Visual stories crafted with cinematic lighting, premium color grading, and high-impact sound design.",
-      stats: "50+ Reels Created",
-      icon: "🎥"
-    },
-    {
-      title: "Travel Videos",
-      description: "Immersive travel vlogs and aesthetic edits capturing cultures, landscapes, and visual rhythms.",
-      stats: "15+ Countries/Cities",
-      icon: "✈️"
-    },
-    {
-      title: "Educational Reels",
-      description: "Fast-paced tech tutorials and educational content designed to simplify coding and software engineering.",
-      stats: "100k+ Views",
-      icon: "🧠"
-    },
-    {
-      title: "My Own Creative Edits",
-      description: "Experimental transitions, 3D overlays, and trendsetting visual effects that push creative bounds.",
-      stats: "Personal Projects",
-      icon: "⚡"
-    }
-  ]
-};
-
-// Brand New Leadership Data
-export const leadershipList = [
-  {
-    title: "IEEE Madhya Pradesh Section (Social Media Team)",
-    description: "Managed and coordinated digital content, driving audience engagement and designing interactive visual campaigns for tech events.",
-    role: "Social Media Coordinator",
-    badge: "Volunteer"
-  },
-  {
-    title: "Team Coordinator – Go-Kart International Racing 2K25",
-    description: "Led multi-disciplinary teams in project management, budget control, and logistics coordination for a high-profile international racing event.",
-    role: "Team Coordinator",
-    badge: "Leadership"
-  },
-  {
-    title: "5-Day MOE IDE Bootcamp, Roorkee",
-    description: "Participated in an intensive Innovation, Design, and Entrepreneurship Bootcamp organized by the Ministry of Education at IIT Roorkee.",
-    role: "Bootcamp Graduate",
-    badge: "Innovation"
-  },
-  {
-    title: "Hosted INFORIA Tech Summit Hackathon",
-    description: "Organized and hosted the flagship hackathon, managing registrations, mentoring participant teams, and coordinating judge evaluations.",
-    role: "Hackathon Organizer",
-    badge: "Co-Curricular"
-  },
-  {
-    title: "Event Coordinator & Anchoring – INFORIA 2K25",
-    description: "Coordinated technical events and served as the main stage anchor, speaking in front of large crowds and managing the summit flow.",
-    role: "Stage Anchor & Coordinator",
-    badge: "Public Speaking"
-  }
-];
-
-// Brand New Internships Data
-export const internshipsList = [
-  {
-    organization: "Netlink, Bhopal",
-    role: "Data Analytics & BI Tools Intern",
-    duration: "June 2025 - August 2025",
-    skills: ["Data Analytics", "Business Intelligence", "Dashboard Design", "Data Modeling"],
-    tech: ["Lumenore", "MySQL", "Excel", "BI Tools"]
-  },
-  {
-    organization: "Canva",
-    role: "Visual Content Creator & Designer",
-    duration: "May 2024 - June 2024",
-    skills: ["Visual Designing", "Poster Design", "Team Branding", "Asset Creation"],
-    tech: ["Canva Pro", "Figma", "Canva Design Suite"]
-  },
-  {
-    organization: "CollegeTips.in",
-    role: "Web Development Intern",
-    duration: "1 Month (Offline)",
-    skills: ["Frontend Development", "Responsive Layouts", "API Testing", "Web Performance"],
-    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"]
-  }
-];
-
-// Brand New Soft Skills Data
+// Soft skills — grounded in real, cited moments from Zawar's actual experience
 export const softSkillsList = [
-  { name: "Leadership", icon: "👑", desc: "Guiding teams, managing tasks, and driving project completion with shared vision." },
-  { name: "Public Speaking", icon: "🎤", desc: "Confident stage presence, anchoring summits, and delivering articulate technical ideas." },
-  { name: "Team Collaboration", icon: "🤝", desc: "Collaborating across fields, building racing carts, and engineering code in sync." },
-  { name: "Communication", icon: "💬", desc: "Clear, concise, and structured interactions in both business and technical contexts." },
-  { name: "Problem Solving", icon: "🧩", desc: "Breaking down complex engineering tasks into clean, logical, and modular pieces." },
-  { name: "Adaptability", icon: "🌟", desc: "Quick to pick up new frameworks like FastAPI, Spring Boot, or automation tools like n8n." },
-  { name: "Creativity", icon: "🎨", desc: "Blending cinematic aesthetics with software structure to build premium experiences." },
-  { name: "Time Management", icon: "⏰", desc: "Balancing B.Tech studies, event hosting, and developing robust software platforms." }
+  { name: "Compliance & Accuracy", icon: "✅", desc: "Audited 500+ household beneficiary records to 100% accuracy standards against government protocols." },
+  { name: "Community Engagement", icon: "🤝", desc: "Built trust with community leaders to raise participation on sensitive survey questions." },
+  { name: "Team Training", icon: "🎓", desc: "Trained junior field staff on interview technique and ethical data handling." },
+  { name: "Process Redesign", icon: "⚙️", desc: "Redesigned a donor-lookup workflow end-to-end, cutting matching time by 40%." },
+  { name: "Stakeholder Communication", icon: "💬", desc: "Delivered financial-literacy sessions in plain language and wrote full policy reports." },
+  { name: "Adaptability", icon: "🌟", desc: "Moved from fieldwork to data administration to statistical modelling to AI tooling — picking up each skillset as needed." },
 ];
 
 export const projects = [
   {
-    id: "foodmesh",
+    id: "zawar-job",
     number: "01",
     badge: "🚀 Flagship Project",
-    title: "FoodMesh",
-    description:
-      "FoodMesh — An enterprise-grade multi-tenant restaurant management and food ordering SaaS platform inspired by UrbanPiper. It enables restaurants to manage multiple outlets, menus, inventory, customers, staff, and orders through a scalable architecture with secure authentication, role-based access control, and real-time operations. Built with React, Next.js, NestJS, PostgreSQL, Redis, Kafka, Elasticsearch, Docker, Kubernetes, and AWS.",
-    techTags: [
-      "React",
-      "Next.js",
-      "NestJS",
-      "PostgreSQL",
-      "Redis",
-      "Kafka",
-      "Elasticsearch",
-      "Docker",
-      "Kubernetes",
-      "AWS",
+    title: "Zawar Job: AI Career System",
+    type: "Full product build (solo)",
+    year: "2026",
+    problem:
+      "Job searching alongside a full-time MSc is slow and unscalable — generic applications get low response rates, and there's no visibility into your pipeline.",
+    whatIDid: [
+      "AI Recruitment Agent — an LLM agent (Claude API) that reads any UK job description, scores it 0–100 against my profile using a weighted framework (skills 35 / experience 30 / visa fit 20 / career alignment 15), then auto-generates a tailored cover letter and STAR-format interview prep.",
+      "Application Tracker Dashboard — live pipeline (Saved → Applied → Interview → Offer) with response-rate analytics and colour-coded match scores.",
+      "AIM Framework — my own Action → Input → Mission methodology, documented in a full Product Requirements Document I authored.",
     ],
-    links: {
-      github: "https://github.com/ersamirsingh/UrbanPiper",
-      demo: null,
-    },
+    result:
+      "Cuts per-application time from ~1 hour to ~20 minutes while enforcing a strict no-hallucination rule — the agent can never invent qualifications.",
+    tech: ["React", "Claude (Anthropic) API", "Prompt Engineering", "Product Design"],
+    screenshots: ["zawar-job-dashboard", "zawar-job-ai-agent", "zawar-job-tracker"],
     isFlagship: true,
   },
   {
-    id: "karigar",
+    id: "bisp-survey",
     number: "02",
     badge: null,
-    title: "Karigar",
-    description:
-      "A platform connecting local skilled workers with customers, featuring real-time search, worker profiles, and booking management with full database integration.",
-    techTags: ["React", "Node.js", "MongoDB", "Express", "REST API"],
-    links: {
-      github: "https://github.com/mdyusuf0/Karigar",
-      frontendDemo: "https://karigar-frontend.onrender.com",
-      backendApi: "https://karigar-zny2.onrender.com",
-    },
+    title: "National Household Survey Operation (BISP)",
+    type: "Government field research",
+    year: "2021–2023",
+    problem:
+      "Pakistan's largest poverty-alleviation programme needed accurate socioeconomic data from communities that are hard to reach and often distrustful of officials.",
+    whatIDid: [
+      "Conducted structured door-to-door interviews across 500+ households, maintaining 100% data accuracy against government protocols.",
+      "Built relationships with community leaders to raise participation on sensitive questions, delivered financial-literacy sessions in plain language.",
+      "Audited beneficiary records for discrepancies and trained junior field staff on interview technique and ethical data handling.",
+    ],
+    result:
+      "Clean, compliant field data feeding directly into national programme decisions — and a personal masterclass in collecting honest data from real people.",
+    skills: ["Survey Administration", "Compliance Auditing", "Community Engagement", "Team Training"],
     isFlagship: false,
   },
   {
-    id: "sentiment-analysis",
+    id: "blood-donor-db",
     number: "03",
     badge: null,
-    title: "AI-Powered Sentiment Analysis",
-    description:
-      "A full-stack web application that analyzes citizen feedback using Artificial Intelligence to classify sentiments as positive, negative, or neutral. Features a responsive React frontend, a Node.js backend, MongoDB for data storage, and n8n automation for workflow orchestration — enabling real-time insights and efficient feedback management.",
-    techTags: ["React", "Node.js", "MongoDB", "n8n", "AI/ML", "REST API"],
-    links: {
-      github: "#", // Update when available
-    },
+    title: "Emergency Blood-Donor Database Optimisation",
+    type: "Data administration & workflow redesign",
+    year: "2020–2021",
+    problem:
+      "In a blood emergency, every minute matters — but donor lookups were slow and unstructured.",
+    whatIDid: [
+      "Restructured a 1,000+ record donor database by blood group, location and availability, and redesigned the retrieval workflow end-to-end.",
+      "Screened new donors through outreach interviews and enforced strict medical-data privacy standards.",
+    ],
+    result:
+      "Donor-to-patient matching time reduced by 40% — a data project where the outcome was measured in lives, not just KPIs.",
+    skills: ["Database Administration", "Data Structuring", "Privacy Compliance", "Process Optimisation"],
+    isFlagship: false,
+  },
+  {
+    id: "student-performance",
+    number: "04",
+    badge: null,
+    title: "Predictive Student Performance Analysis",
+    type: "Statistical modelling · University research",
+    year: null,
+    problem: null,
+    whatIDid: [
+      "Built a multiple-regression model in R to identify at-risk students early, achieving 85% predictive accuracy.",
+      "Delivered a full written report with policy recommendations for educational institutions.",
+    ],
+    result:
+      "A working early-warning approach institutions could act on — and a demonstration of the full modelling cycle: data cleaning → model building → validation → communication.",
+    tech: ["R", "Multiple Regression", "Statistical Reporting"],
+    isFlagship: false,
+  },
+  {
+    id: "online-vs-physical-learning",
+    number: "05",
+    badge: null,
+    title: "Online vs. Physical Learning: A Comparative Study",
+    type: "End-to-end research study",
+    year: null,
+    problem: null,
+    whatIDid: [
+      "Led a complete hypothesis-testing study comparing student engagement and institutional efficiency across learning modalities.",
+      "Designed the survey instruments myself, collected primary data, ran the statistical tests, and presented findings.",
+    ],
+    result:
+      "Proof I can own a research question from design to conclusion — not just analyse someone else's dataset.",
+    skills: ["Hypothesis Testing", "Survey Instrument Design", "Primary Data Collection", "Presentation"],
     isFlagship: false,
   },
 ];
 
-export const certificates = {
-  featured: [
-    {
-      name: "Oracle Cloud Infrastructure 2025",
-      issuer: "Oracle",
-      icon: "☁️",
-    },
-    {
-      name: "Programming in Java (94%)",
-      issuer: "NPTEL",
-      icon: "☕",
-    },
-    {
-      name: "C Programming & Assembly Language",
-      issuer: "NPTEL",
-      icon: "⚙️",
-    },
-    {
-      name: "Technology Job Simulation",
-      issuer: "Deloitte",
-      icon: "💼",
-    },
-    {
-      name: "Career Edge – IT Primer",
-      issuer: "TCS iON",
-      icon: "🎓",
-    },
-    {
-      name: "Fundamentals of BI & Analytics",
-      issuer: "Lumenore",
-      icon: "📊",
-    },
-  ],
-  viewAllUrl:
-    "https://drive.google.com/file/d/1ObdGWtVSx8SsfR4AcbCySSd9LFXcAs9f/view?usp=sharing",
-};
+// Work Experience timeline
+export const experienceList = [
+  {
+    role: "Field Compliance Officer & Community Interviewer",
+    organization: "Benazir Income Support Programme (Govt. of Pakistan)",
+    duration: "2021 – 2023",
+    badge: "Field Research",
+  },
+  {
+    role: "Data Administrator & Coordinator",
+    organization: "Hayatian Blood Society",
+    duration: "2020 – 2021",
+    badge: "Data Administration",
+  },
+];
 
-export const education = {
-  degree: "B.Tech – Computer Science & Engineering",
-  institution: "IES College of Technology (RGPV)",
-  cgpa: "8.35",
-  graduation: "2027",
-  twelfth: "12th Science – 81%",
-  tenth: "10th CBSE – 70%",
-};
+// Education timeline
+export const educationList = [
+  {
+    degree: "MSc Data Science",
+    institution: "University of the West of England, Bristol",
+    duration: "2026 – 2027",
+  },
+  {
+    degree: "BS Statistics",
+    institution: "University of Gujrat",
+    duration: "2019 – 2023",
+  },
+];
 
 export const footerContent = {
   taglines: [
-    "Software Engineering & Web Dev",
-    "Java · Spring Boot · React",
-    "Full Stack Applications",
+    "Data Science & Field Research",
+    "R · Python · Statistics",
+    "Survey Ops & AI Analytics",
   ],
-  credential: "B.Tech CSE · CGPA 8.35",
-  copyright: `© ${new Date().getFullYear()} Md Yusuf | Built with React`,
+  credential: "MSc Data Science · BS Statistics",
+  copyright: `© ${new Date().getFullYear()} Zawar Zohaib | Built with React`,
 };
 
 // EmailJS Configuration

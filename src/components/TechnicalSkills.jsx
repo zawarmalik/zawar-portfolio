@@ -1,23 +1,8 @@
 import React from 'react';
 import { technicalSkills } from '../data/portfolioData';
 
-const SkillProgress = ({ name, level }) => (
-  <div className="mb-4">
-    <div className="flex justify-between items-center mb-1">
-      <span className="text-white text-sm font-semibold tracking-wide">{name}</span>
-      <span className="text-red-400 text-xs font-bold font-mono">{level}%</span>
-    </div>
-    <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden border border-white/5">
-      <div 
-        className="h-full bg-gradient-to-r from-red-600 to-red-400 rounded-full transition-all duration-1000 ease-out"
-        style={{ width: `${level}%` }}
-      />
-    </div>
-  </div>
-);
-
 const SkillCard = ({ category, index }) => (
-  <div 
+  <div
     data-aos="fade-up"
     data-aos-delay={index * 100}
     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:scale-[1.02] hover:border-red-500/30 hover:shadow-[0_20px_50px_rgba(255,42,42,0.1)] transition-all duration-500"
@@ -25,9 +10,14 @@ const SkillCard = ({ category, index }) => (
     <h3 className="text-white text-lg font-black tracking-tight mb-6 pb-2 border-b border-white/10 uppercase">
       {category.title}
     </h3>
-    <div>
+    <div className="flex flex-wrap gap-2">
       {category.skills.map((skill) => (
-        <SkillProgress key={skill.name} name={skill.name} level={skill.level} />
+        <span
+          key={skill}
+          className="px-3 py-1.5 text-xs font-bold text-white/80 bg-white/5 rounded-full border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
+        >
+          {skill}
+        </span>
       ))}
     </div>
   </div>
