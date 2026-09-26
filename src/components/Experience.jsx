@@ -5,22 +5,40 @@ const ExperienceCard = ({ item, index }) => (
   <div
     data-aos="fade-up"
     data-aos-delay={index * 150}
-    className="bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:scale-[1.02] hover:bg-black/35 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500"
+    className="bg-black/25 backdrop-blur-md border border-white/15 rounded-3xl p-7 md:p-8 hover:scale-[1.02] hover:bg-black/35 hover:shadow-[0_20px_50px_rgba(0,0,0,0.35)] transition-all duration-500 flex flex-col justify-between"
   >
-    <div className="flex justify-between items-start mb-6">
-      <span className="text-white/40 text-xs font-mono font-bold tracking-widest uppercase">
-        {item.duration}
-      </span>
-      <span className="bg-white/10 text-white text-[10px] font-black tracking-widest uppercase py-1 px-3 rounded-full border border-white/15">
-        {item.badge}
-      </span>
+    <div>
+      <div className="flex flex-wrap justify-between items-center gap-2 mb-5">
+        <span className="text-white/60 text-xs font-mono font-bold tracking-widest uppercase">
+          {item.duration}
+        </span>
+        <span className="bg-white/10 text-white text-[10px] font-black tracking-widest uppercase py-1 px-3 rounded-full border border-white/20">
+          {item.badge}
+        </span>
+      </div>
+      <h3 className="text-white text-2xl font-black mb-1 tracking-tight">
+        {item.role}
+      </h3>
+      <p className="text-red-200 text-sm font-black tracking-wide uppercase mb-2">
+        {item.organization}
+      </p>
+      {item.location && (
+        <p className="text-white/50 text-xs font-semibold tracking-wide mb-4">
+          📍 {item.location}
+        </p>
+      )}
+
+      {item.points && item.points.length > 0 && (
+        <ul className="space-y-2.5 mt-4 text-white/80 text-sm leading-relaxed border-t border-white/10 pt-4">
+          {item.points.map((pt, idx) => (
+            <li key={idx} className="flex items-start gap-2.5">
+              <span className="text-red-300 font-bold mt-0.5 text-sm select-none">▸</span>
+              <span>{pt}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
-    <h3 className="text-white text-2xl font-black mb-1 tracking-tight">
-      {item.role}
-    </h3>
-    <p className="text-red-200 text-sm font-black tracking-wide uppercase">
-      {item.organization}
-    </p>
   </div>
 );
 
@@ -42,13 +60,13 @@ const Experience = () => {
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight uppercase">
             Work Experience
           </h2>
-          <p className="text-red-100 text-base md:text-lg font-semibold max-w-lg mx-auto">
-            Real-world field research and data administration roles where the data mattered.
+          <p className="text-red-100 text-base md:text-lg font-semibold max-w-xl mx-auto">
+            Digital agency leadership, national survey operations, and mission-critical data systems where the outcomes mattered.
           </p>
         </div>
 
         {/* Experience Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           {experienceList.map((item, index) => (
             <ExperienceCard key={item.organization} item={item} index={index} />
           ))}

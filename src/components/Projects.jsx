@@ -1,5 +1,5 @@
-import React from 'react';
-import { projects, socialLinks } from '../data/portfolioData';
+import React, { useState } from 'react';
+import { projects, projectCategories, socialLinks } from '../data/portfolioData';
 import zawarJobDashboard from '../assets/projects/zawar-job-dashboard.png';
 import zawarJobAiAgent from '../assets/projects/zawar-job-ai-agent.png';
 import zawarJobTracker from '../assets/projects/zawar-job-tracker.png';
@@ -23,7 +23,8 @@ const ExternalLinkIcon = () => (
 );
 
 const ProjectCard = ({ project, aosDelay }) => {
-  const tags = project.tech || project.skills || [];
+  // Combine tech and skills if both exist, removing duplicates
+  const allTags = Array.from(new Set([...(project.tech || []), ...(project.skills || [])]));
 
   return (
     <div
@@ -35,146 +36,197 @@ const ProjectCard = ({ project, aosDelay }) => {
           : 'bg-white/10 hover:bg-white/20'
       }`}
     >
-      <div className={`rounded-2xl p-6 md:p-8 h-full backdrop-blur-md transition-all duration-500 ${
+      <div className={`rounded-2xl p-6 md:p-8 h-full backdrop-blur-md transition-all duration-500 flex flex-col justify-between ${
         project.isFlagship
           ? 'bg-[#0f0f0f]/95 group-hover:bg-[#0f0f0f]/90'
           : 'bg-[#111111]/90 group-hover:bg-[#111111]/80'
       }`}>
-        {/* Badge + meta row */}
-        <div className="flex flex-wrap items-center gap-3 mb-4">
-          {project.badge && (
-            <span className="inline-block text-xs font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
-              {project.badge}
-            </span>
-          )}
-          {(project.type || project.year) && (
-            <span className="text-xs font-semibold text-white/40 tracking-wide">
-              {project.type}{project.type && project.year ? ' · ' : ''}{project.year}
-            </span>
-          )}
-        </div>
+        <div>
+          {/* Badge + meta row */}
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            {project.badge && (
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
+                {project.badge}
+              </span>
+            )}
+            {(project.type || project.year) && (
+              <span className="text-xs font-semibold text-white/50 tracking-wide">
+                {project.type}{project.type && project.year ? ' · ' : ''}{project.year}
+              </span>
+            )}
+          </div>
 
-        {/* Number + Title */}
-        <div className="flex items-baseline gap-4 mb-6">
-          <span className="text-5xl font-black text-white/10 font-serif italic">{project.number}</span>
-          <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">{project.title}</h3>
-        </div>
+          {/* Number + Title */}
+          <div className="flex items-baseline gap-4 mb-2">
+            <span className="text-4xl md:text-5xl font-black text-white/15 font-serif italic">{project.number}</span>
+            <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">{project.title}</h3>
+          </div>
 
-        {/* Problem / What I Did / Result */}
-        <div className="flex flex-col gap-5 mb-8 max-w-3xl">
-          {project.problem && (
-            <div>
-              <h4 className="text-white/40 text-xs font-bold uppercase tracking-widest mb-1.5">The Problem</h4>
-              <p className="text-white/60 text-sm md:text-base leading-relaxed font-medium">{project.problem}</p>
+          {/* Role badge */}
+          {project.role && (
+            <div className="mb-6 flex items-center gap-2">
+              <span className="text-xs font-bold text-red-300/90 bg-red-500/10 px-3 py-1 rounded-lg border border-red-500/20">
+                Role: {project.role}
+              </span>
             </div>
           )}
-          <div>
-            <h4 className="text-white/40 text-xs font-bold uppercase tracking-widest mb-1.5">What I Did</h4>
-            {Array.isArray(project.whatIDid) ? (
-              <ul className="text-white/60 text-sm md:text-base leading-relaxed font-medium space-y-2 list-disc pl-4">
-                {project.whatIDid.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-white/60 text-sm md:text-base leading-relaxed font-medium">{project.whatIDid}</p>
+
+          {/* Problem / What I Did / Result */}
+          <div className="flex flex-col gap-5 mb-6 max-w-3xl">
+            {project.problem && (
+              <div>
+                <h4 className="text-white/40 text-xs font-bold uppercase tracking-widest mb-1.5">The Problem</h4>
+                <p className="text-white/70 text-sm md:text-base leading-relaxed font-medium">{project.problem}</p>
+              </div>
+            )}
+            <div>
+              <h4 className="text-white/40 text-xs font-bold uppercase tracking-widest mb-1.5">What I Did</h4>
+              {Array.isArray(project.whatIDid) ? (
+                <ul className="text-white/70 text-sm md:text-base leading-relaxed font-medium space-y-2 list-disc pl-4">
+                  {project.whatIDid.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-white/70 text-sm md:text-base leading-relaxed font-medium">{project.whatIDid}</p>
+              )}
+            </div>
+
+            {/* Problem Solving shown highlight callout */}
+            {project.problemSolving && (
+              <div className="p-4 rounded-xl bg-teal-950/40 border border-teal-500/30 text-teal-200">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="text-teal-400 font-bold text-xs uppercase tracking-wider">🔬 Problem Solving & Rigour</span>
+                </div>
+                <p className="text-xs md:text-sm text-teal-100/90 leading-relaxed font-medium">
+                  {project.problemSolving}
+                </p>
+              </div>
+            )}
+
+            {project.result && (
+              <div>
+                <h4 className="text-white/40 text-xs font-bold uppercase tracking-widest mb-1.5">Result</h4>
+                <p className="text-white/90 text-sm md:text-base leading-relaxed font-semibold">{project.result}</p>
+              </div>
             )}
           </div>
-          <div>
-            <h4 className="text-white/40 text-xs font-bold uppercase tracking-widest mb-1.5">Result</h4>
-            <p className="text-white/80 text-sm md:text-base leading-relaxed font-semibold">{project.result}</p>
-          </div>
+
+          {/* Screenshots */}
+          {project.screenshots && project.screenshots.length > 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+              {project.screenshots.map((shot) => (
+                <div key={shot} className="rounded-lg overflow-hidden border border-white/10 hover:border-red-500/40 transition-all duration-300">
+                  <img src={screenshotMap[shot]} alt={`${project.title} screenshot`} className="w-full h-full object-cover object-top" loading="lazy" />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
-        {/* Screenshots */}
-        {project.screenshots && project.screenshots.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
-            {project.screenshots.map((shot) => (
-              <div key={shot} className="rounded-lg overflow-hidden border border-white/10 hover:border-red-500/40 transition-all duration-300">
-                <img src={screenshotMap[shot]} alt={`${project.title} screenshot`} className="w-full h-full object-cover object-top" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        )}
+        <div>
+          {/* Tags */}
+          {allTags.length > 0 && (
+            <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+              {allTags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
 
-        {/* Tags */}
-        {tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-8">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-
-        {/* Action Buttons */}
-        {project.links && (project.links.github || project.links.demo) && (
-          <div className="flex flex-wrap gap-3">
-            {project.links.github && (
-              <a
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white hover:text-black transition-all duration-300"
-              >
-                <GitHubIcon />
-                GitHub
-              </a>
-            )}
-            {project.links.demo && (
-              <a
-                href={project.links.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
-              >
-                <ExternalLinkIcon />
-                Live Demo
-              </a>
-            )}
-          </div>
-        )}
+          {/* Action Buttons */}
+          {project.links && (project.links.github || project.links.demo) && (
+            <div className="flex flex-wrap gap-3 mt-6">
+              {project.links.github && (
+                <a
+                  href={project.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white hover:text-black transition-all duration-300"
+                >
+                  <GitHubIcon />
+                  GitHub
+                </a>
+              )}
+              {project.links.demo && (
+                <a
+                  href={project.links.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
+                >
+                  <ExternalLinkIcon />
+                  Live Demo
+                </a>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
 };
 
 const Projects = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const filteredProjects = activeCategory === 'all'
+    ? projects
+    : projects.filter((p) => p.category === activeCategory);
+
   return (
     <section id="projects" className="bg-[#0a0a0a] pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div data-aos="fade-up" className="mb-16 md:mb-20">
+        <div data-aos="fade-up" className="mb-12 md:mb-16">
           <div className="inline-block border border-white/20 rounded-full px-5 py-1.5 text-sm text-white/60 font-bold mb-8 shadow-sm bg-white/5 backdrop-blur-sm">
-            Featured Projects
+            Featured Projects & Case Studies
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight">
             Work that speaks <br className="hidden md:block" />for itself
           </h2>
-          <p className="text-white/50 text-base md:text-lg max-w-lg font-medium leading-relaxed">
-            Five case studies spanning AI product development, national field research, and statistical modelling — each with a real problem, a real result.
+          <p className="text-white/60 text-base md:text-lg max-w-2xl font-medium leading-relaxed">
+            Case studies spanning AI & machine learning engineering, digital agency strategy, system architecture, and national field research — each with a real problem, a documented process, and measurable outcomes.
           </p>
+        </div>
+
+        {/* Category Filters */}
+        <div data-aos="fade-up" className="flex flex-wrap gap-2.5 mb-10">
+          {projectCategories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
+              className={`px-5 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 cursor-pointer ${
+                activeCategory === cat.id
+                  ? 'bg-[#ff2a2a] text-white shadow-[0_0_25px_rgba(255,42,42,0.45)]'
+                  : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-white/10'
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
         </div>
 
         {/* Project Cards */}
         <div className="flex flex-col gap-6 md:gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}
-              aosDelay={String((index + 1) * 100)}
+              aosDelay={String(Math.min((index + 1) * 100, 400))}
             />
           ))}
         </div>
 
         {/* GitHub CTA */}
         {socialLinks.github && (
-          <div data-aos="fade-up" data-aos-delay="500" className="mt-16 flex justify-center">
+          <div data-aos="fade-up" data-aos-delay="400" className="mt-16 flex justify-center">
             <a
               href={socialLinks.github}
               target="_blank"

@@ -40,8 +40,8 @@ const TechnicalSkills = () => {
           <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4 uppercase">
             My Skillset
           </h2>
-          <p className="text-white/50 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
-            A comprehensive overview of my programming languages, frameworks, databases, and engineering concepts.
+          <p className="text-white/60 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+            A comprehensive overview of my tools spanning Machine Learning, Statistical Modelling, Business Strategy, and Data Engineering.
           </p>
         </div>
 

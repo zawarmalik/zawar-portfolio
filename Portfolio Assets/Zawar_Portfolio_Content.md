@@ -1,5 +1,5 @@
 # Zawar Zohaib — Portfolio Content Pack
-*Ready-to-paste content for your animated portfolio (Antigravity/Codex customisation step). All content is 100% grounded in your real experience — nothing invented.*
+*Ready-to-paste content for your animated portfolio. All content is 100% grounded in your real experience — nothing invented.*
 
 ---
 
@@ -32,108 +32,135 @@ I'm currently available for part-time research, data and field-interviewing role
 
 ---
 
-## 3. PROJECTS SECTION — Case Studies
+## 3. EXPERIENCE SECTION
 
-*Written portfolio-style: Problem → What I Did → Result → Tech. Ye format recruiter ko "real experience" feel deta hai kyunke har project ek story hai with measurable outcomes.*
+### 💼 Co-Founder & Owner · Gwent Digital Ltd
+**Location:** Newport, Wales, UK | **Duration:** 2026 – Present | **Badge:** Digital Agency & Strategy
+- Co-founded a digital agency that builds websites, custom business tools and data-led growth strategies for small businesses.
+- Lead data and analytics work: sales analysis, customer insight and performance tracking for client businesses.
+- Scope projects, write product requirement documents (PRDs), manage delivery timelines and deal directly with clients.
+- Apply lessons from running our own retail and hospitality businesses to client strategy.
+
+### 📋 Field Compliance Officer & Community Interviewer · Benazir Income Support Programme
+**Location:** Punjab, Pakistan | **Duration:** 2021 – 2023 | **Badge:** Field Research & Survey Ops
+- Planned and ran field surveys, managed data collection teams and quality-checked responses across 500+ households.
+- Maintained 100% data accuracy against strict government compliance protocols.
+- Administered, cleaned, and audited large beneficiary datasets for national reporting.
+- Trained junior field staff on interview technique and ethical data handling.
+
+### 🩸 Data Administrator & Coordinator · Hayatian Blood Society
+**Location:** Gujrat, Pakistan | **Duration:** 2020 – 2021 | **Badge:** Data Administration
+- Administered and cleaned a 1,000+ record emergency blood-donor database structured by blood group, location, and availability.
+- Redesigned donor-retrieval workflow end-to-end, cutting donor-to-patient matching time by 40%.
+- Screened new donors through structured outreach interviews while enforcing strict medical privacy standards.
+
+### 🎓 Education
+- **2026 – 2027 · MSc Data Science** — University of the West of England, Bristol
+- **2019 – 2023 · BS Statistics** — University of Gujrat
+
+---
+
+## 4. PROJECTS SECTION — Case Studies
 
 ### 🤖 Project 1 — Zawar Job: AI Career System
-**Type:** Full product build (solo) · 2026
-**Tech:** React · Tailwind-style UI · Claude (Anthropic) API · Prompt Engineering · Product Design
+- **Type:** Full product build (solo) · 2026 | **Role:** Solo Creator & AI Engineer
+- **Tech:** React · Claude (Anthropic) API · Prompt Engineering · Product Design
+- **Problem:** Job searching alongside a full-time MSc is slow and unscalable — generic applications get low response rates, and there's no visibility into your pipeline.
+- **What I Built:**
+  - AI Recruitment Agent — LLM agent scoring jobs 0–100 against profile with zero hallucination.
+  - Application Tracker Dashboard — live pipeline with response-rate analytics.
+  - AIM Framework — Action → Input → Mission methodology documented in a comprehensive PRD.
+- **Result:** Cuts per-application time from ~1 hour to ~20 minutes.
 
-**The Problem:** Job searching alongside a full-time MSc is slow and unscalable — generic applications get low response rates, and there's no visibility into your pipeline.
+### 🎮 Project 2 — Sentiment-Weighted Game Recommender (Steam 2025)
+- **Type:** Machine Learning & NLP System · 2025 | **Role:** Data Scientist, Hybrid Recommender Lead (Team of 5)
+- **Tech:** Python, scikit-learn, Word2Vec, BERT, TF-IDF, SVD, pandas
+- **Problem:** Star ratings and thumbs-up counts don't say why players liked a game. We wanted recommendations that take review text into account.
+- **What I Did:**
+  - Built hybrid recommender: TF-IDF content-based baseline + SVD collaborative filtering.
+  - Re-ranked recommendations using sentiment scores from 37,778 reviews across 3,993 games.
+  - Evaluated with Precision@K on synthetic pipeline before live user plug-in.
+  - Word2Vec + Random Forest reached a macro-F1 of 0.89, outperforming fine-tuned BERT (0.80).
+- **Problem Solving Shown:** When the professor expected BERT to win, investigated class imbalance and overfitting, and defended the result with evidence instead of forcing expectations.
+- **Result:** Delivered high-precision hybrid recommendation pipeline backed by empirical evidence.
 
-**What I Built:** A complete AI-powered career platform with three engines:
-- **AI Recruitment Agent** — an LLM agent (Claude API) that reads any UK job description, scores it 0–100 against my profile using a weighted framework (skills 35 / experience 30 / visa fit 20 / career alignment 15), then auto-generates a tailored cover letter and STAR-format interview prep.
-- **Application Tracker Dashboard** — live pipeline (Saved → Applied → Interview → Offer) with response-rate analytics and colour-coded match scores.
-- **AIM Framework** — my own Action → Input → Mission methodology, documented in a full Product Requirements Document I authored.
+### 🌐 Project 3 — Gwent Digital: Agency Launch
+- **Type:** Business Strategy & Agency Operations · 2026 | **Role:** Co-Founder & Strategy Lead
+- **Problem:** A new agency with real business experience but no online presence.
+- **What I Did:** Defined brand positioning ("we run real businesses, analyse the data, and design strategy from it"), organised service structure and price tiers, and wrote full website PRDs.
+- **Result:** Full agency operational framework established with data-led packages for UK small businesses.
 
-**Result:** Cuts per-application time from ~1 hour to ~20 minutes while enforcing a strict no-hallucination rule — the agent can never invent qualifications.
+### 📱 Project 4 — Fonetech Shop Management System
+- **Type:** System Architecture & PRD Design · 2025–2026 | **Role:** Product Owner / Business Analyst
+- **Problem:** Phone repair and resale retail shop tracking stock, repairs, and sales by hand.
+- **What I Did:** Mapped operational workflows and authored complete build PRD for inventory, repairs, and sales.
+- **Result:** Complete specifications ready for engineering, eliminating stock tracking errors.
 
-**Screenshots to include:** dashboard stats view, AI agent chat, tracker pipeline.
+### 📈 Project 5 — Fonetech Customer Acquisition System
+- **Type:** Marketing Analytics & Growth · 2025–2026 | **Role:** Growth Analyst & Strategy Lead
+- **Problem:** Retail shop relied passively on walk-ins.
+- **What I Did:** Designed customer acquisition system: local social campaigns, weekend offers, and multi-channel attribution tracking.
+- **Result:** Predictable customer acquisition pipeline with tracked marketing ROI.
 
----
+### 🍛 Project 6 — My Punjab Desi Kitchen: Turnaround Plan
+- **Type:** Hospitality Strategy & Revenue Turnaround · 2025–2026 | **Role:** Co-Owner / Strategy Consultant
+- **Problem:** A one-year-old restaurant needed higher weekly sales volume.
+- **What I Did:** Turnaround plan around three target segments (students, professionals, families) and concept "The Scent of Home (Ghar Ki Yaad)".
+- **Result:** Smoothed out weekly revenue dips with focused repeat-customer campaigns.
 
-### 📋 Project 2 — National Household Survey Operation (BISP)
-**Type:** Government field research · 2021–2023
-**Skills:** Survey administration · Compliance auditing · Community engagement · Team training
+### 📋 Project 7 — National Household Survey Operation (BISP)
+- **Type:** Government field research · 2021–2023 | **Role:** Field Compliance Officer
+- 500+ households surveyed with 100% compliance accuracy, beneficiary audits, and junior staff training.
 
-**The Problem:** Pakistan's largest poverty-alleviation programme needed accurate socioeconomic data from communities that are hard to reach and often distrustful of officials.
-
-**What I Did:** Conducted structured door-to-door interviews across **500+ households**, maintaining **100% data accuracy** against government protocols. Built relationships with community leaders to raise participation on sensitive questions, delivered financial-literacy sessions in plain language, audited beneficiary records for discrepancies, and trained junior field staff on interview technique and ethical data handling.
-
-**Result:** Clean, compliant field data feeding directly into national programme decisions — and a personal masterclass in collecting honest data from real people.
-
----
-
-### 🩸 Project 3 — Emergency Blood-Donor Database Optimisation
-**Type:** Data administration & workflow redesign · 2020–2021
-**Skills:** Database administration · Data structuring · Privacy compliance · Process optimisation
-
-**The Problem:** In a blood emergency, every minute matters — but donor lookups were slow and unstructured.
-
-**What I Did:** Restructured a **1,000+ record** donor database by blood group, location and availability, and redesigned the retrieval workflow end-to-end. Screened new donors through outreach interviews and enforced strict medical-data privacy standards.
-
-**Result:** **Donor-to-patient matching time reduced by 40%** — a data project where the outcome was measured in lives, not just KPIs.
-
----
-
-### 📊 Project 4 — Predictive Student Performance Analysis
-**Type:** Statistical modelling · University research
-**Tech:** R · Multiple regression · Statistical reporting
-
-**What I Did:** Built a multiple-regression model in R to identify at-risk students early, achieving **85% predictive accuracy**. Delivered a full written report with policy recommendations for educational institutions.
-
-**Result:** A working early-warning approach institutions could act on — and a demonstration of the full modelling cycle: data cleaning → model building → validation → communication.
-
----
-
-### 🔬 Project 5 — Online vs. Physical Learning: A Comparative Study
-**Type:** End-to-end research study
-**Skills:** Hypothesis testing · Survey instrument design · Primary data collection · Presentation
-
-**What I Did:** Led a complete hypothesis-testing study comparing student engagement and institutional efficiency across learning modalities. Designed the survey instruments myself, collected primary data, ran the statistical tests, and presented findings.
-
-**Result:** Proof I can own a research question from design to conclusion — not just analyse someone else's dataset.
+### 🩸 Project 8 — Emergency Blood-Donor Database Optimisation
+- **Type:** Data administration & workflow redesign · 2020–2021 | **Role:** Data Administrator
+- 1,000+ record donor database restructured; retrieval time reduced by 40%.
 
 ---
 
-## 4. NEXT PROJECTS TO BUILD (2 weekends, portfolio ko aur strong karne ke liye)
+## 5. SKILLS & METHODOLOGY
 
-Ye teen projects **genuinely build karo** phir portfolio mein add karo — sab aapki current skills se possible hain aur UK recruiters ko directly relevant:
+### Core Methodology Pillars
+1. **Project Handling**
+   - Scoping work and writing PRDs before anything is built
+   - Managing timelines, team roles and progress reports (led progress reporting on Steam project)
+   - Working directly with clients and business partners
+2. **Problem Solving**
+   - Tracing a business problem back to its cause in the data
+   - Defending results with evidence when they don't match expectations
+   - Building workarounds when data is missing (synthetic samples, staged pipelines)
+3. **Data Interpretation**
+   - Turning model outputs into plain-English decisions
+   - Choosing the right metric (F1 over accuracy on imbalanced data)
+   - Spotting data quality problems from field experience
 
-1. **Newport/Wales Job Market Dashboard** — Python (Pandas) + free data se local part-time job trends analyse karo, chart banao. *Ye UK employers ko dikhata hai ke aap UK market samajhte ho.*
-2. **UK Cost-of-Living Statistical Analysis** — ONS ki free open data par regression/hypothesis testing in R. *ONS aapka target employer bhi hai — unka data use karna smart signal hai.*
-3. **Survey Data Cleaning Pipeline** — ek messy survey dataset ko Python/R se clean karne ka documented notebook. *Aapki fieldwork + data skills ka perfect bridge.*
-
-⚠️ **Honesty rule:** Portfolio mein sirf wo cheezein daalo jo aapne sach mein ki hain. Interview mein har project ke baare mein detail se poocha ja sakta hai — upar ke 5 case studies aapke real kaam par based hain isliye aap confidently defend kar sakte ho.
-
----
-
-## 5. SKILLS SECTION (portfolio grid ke liye)
-
-| Category | Skills |
-|---|---|
-| **Statistics & Analysis** | R, SPSS, Minitab, Regression, Hypothesis Testing, Data Cleaning |
-| **Programming & Data** | Python (Pandas), Excel (VLOOKUP, Pivot Tables), Google Sheets, SQL (learning) |
-| **Research & Fieldwork** | Survey Design, Structured Interviewing, Qualitative Data Collection, Compliance Auditing |
-| **AI & Tools** | Claude/LLM APIs, Prompt Engineering, React (basic), MS Office |
-| **Professional** | Report Writing, Data Protection/GDPR, Team Training, Stakeholder Engagement |
-
----
-
-## 6. EXPERIENCE SECTION (timeline format)
-
-**2026 – 2027 · MSc Data Science** — University of the West of England, Bristol
-**2021 – 2023 · Field Compliance Officer & Community Interviewer** — Benazir Income Support Programme (Govt. of Pakistan)
-**2020 – 2021 · Data Administrator & Coordinator** — Hayatian Blood Society
-**2019 – 2023 · BS Statistics** — University of Gujrat
+### Technical & Business Stack
+- **Machine Learning & NLP:** Python, scikit-learn, Word2Vec, BERT, TF-IDF, Recommender Systems (SVD), Macro-F1, Precision@K
+- **Data & Statistics:** R, pandas, SQL, Hypothesis Testing, Data Visualisation, Excel (VLOOKUP, Pivot Tables), Data Cleaning
+- **Business & Strategy:** Market Analysis, Customer Segmentation, Marketing Strategy, Client Management, PRD Scoping
+- **AI & Modern Tools:** Claude/LLM APIs, Prompt Engineering, React, Git, System Design
+- **Fieldwork & Research:** Survey Design, Structured Interviewing, Compliance Auditing, Primary Data Collection
 
 ---
 
-## 7. CONTACT SECTION
+## 6. IMAGE PROMPTS (Midjourney, Gemini, ChatGPT, Ideogram)
 
-- 📍 Newport, Wales, UK
-- ✉️ zawarzohaib096@gmail.com
-- 📱 +44 7405 376702
-- 💼 LinkedIn: *(apna URL yahan daalo — profile abhi optimise karo!)*
-- ✅ Available: part-time (20 hrs/week) · full-time in university holidays
+**Consistent Style Suffix:**
+> `"consistent style: deep navy and teal palette, soft studio lighting, clean modern editorial look, no text"`
+
+1. **Profile / Hero Photo:**
+   `Professional portrait of the man in the reference photo, smart casual navy blazer, standing in a modern bright office with large windows, a laptop showing data charts softly blurred behind him, confident relaxed smile, shallow depth of field, 85mm lens, natural light, consistent style: deep navy and teal palette, soft studio lighting, clean modern editorial look, no text --ar 1:1`
+2. **About Section:**
+   `A clipboard with printed survey forms next to a laptop showing a clean analytics dashboard, on a wooden desk, symbolising the journey from field research to data science, top-down view, warm natural light, consistent style: deep navy and teal palette, soft studio lighting, clean modern editorial look, no text --ar 16:9`
+3. **Steam Recommender:**
+   `Abstract visualisation of a recommendation network: glowing nodes representing video games connected by lines, with small positive and negative sentiment markers floating around them, dark navy background, teal and amber highlights, futuristic data art, consistent style: deep navy and teal palette, soft studio lighting, clean modern editorial look, no text --ar 16:9`
+4. **Gwent Digital:**
+   `Two young entrepreneurs working together at a modern co-working desk in a Welsh town, laptops with website wireframes and analytics, Newport streets visible through the window, candid, bright and professional, consistent style: deep navy and teal palette, soft studio lighting, clean modern editorial look, no text --ar 16:9`
+5. **Fonetech Shop Management System:**
+   `A small modern phone repair shop counter with a tablet showing an inventory and repair-tracking dashboard, smartphones and tools neatly arranged, clean and organised, product photography style, consistent style: deep navy and teal palette, soft studio lighting, clean modern editorial look, no text --ar 16:9`
+6. **Fonetech Customer Acquisition:**
+   `A smartphone displaying a local social media promotion, surrounded by floating icons of location pins, customer profiles and a rising sales graph, clean 3D illustration style, consistent style: deep navy and teal palette, soft studio lighting, clean modern editorial look, no text --ar 16:9`
+7. **My Punjab Restaurant:**
+   `Warm inviting Punjabi restaurant table with steaming curry, fresh naan and chai, a tablet beside it showing a weekly sales growth chart, golden evening light, food photography, consistent style: deep navy and teal palette, soft studio lighting, clean modern editorial look, no text --ar 16:9`
+8. **Skills Section Background:**
+   `Minimal abstract background of flowing data lines and small chart shapes, navy and teal gradient, lots of empty space for text, consistent style: deep navy and teal palette, soft studio lighting, clean modern editorial look, no text --ar 16:9`
